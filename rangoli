@@ -1,0 +1,26 @@
+def print_rangoli(l):
+    al = 'abcdefghijklmnopqrstuvwxyz'
+    k = l - 1
+    for i in range(l):
+        se = ''
+        for j in range(i+1):
+            if se == '':
+                se = se + al[k-j]
+            else:    
+                se = se +'-'+ al[k-j]
+        for m in range(i,0,-1):
+            se = se +'-'+ al[k-m+1] 
+        print(se.center(4*l-3,'-'))
+    for i in range(l-2,-1,-1):
+        se = ''
+        for j in range(i+1):
+            if se == '':
+                se = se + al[k-j]
+            else:    
+                se = se +'-'+ al[k-j]
+        for m in range(i,0,-1):
+            se = se +'-'+ al[k-m+1] 
+        print(se.center(4*l-3,'-'))
+
+n = int(input('pilih antara 1 - 26: '))
+print_rangoli(n)
